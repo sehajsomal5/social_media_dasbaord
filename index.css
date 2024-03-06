@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+:root{
+  --color-dark: hsl(252, 30% , 17%);
+  --color-light: hsl(252 , 30% , 95%);
+  --color-gray: hsl(252 , 15% , 65%);
+  --color-white: hsl(252 , 30% , 100%);
+  --color-primary: hsl(252 , 75% , 60%);
+  --color-secondary: hsl(252 , 100% , 90%);
+  --color-success: hsl(120 , 95% , 65%);
+  --color-danger: hsl(0 , 95% , 65%);
+  --color-black: hsl(252 , 30% , 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding:0.6rem 1rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding:1rem;
+}
+
+*,
+*::before,
+*::after{
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   border: none;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color:var(--color-dark);
+    background-color:var(--color-light);
+    overflow-x: hidden;
+}
+h1{
+    margin: 5%;
+    animation-name: ease-in;
+    animation-duration: 8s;
+}
+@keyframes ease-in{
+    from{color: var(--color-light);}
+    to{color: var(--color-dark);}
+}
+.cardins{
+    
+   margin: 5%;
+   padding: 1%;
+    background-color:var(--color-secondary);
+    border-radius: 12px;
+    align-items: center;
+    }
+    /* .cardins:hover{
+        background-color: var(--color-gray);
+    } */
+    .textins{
+        padding-left: 5%;
+    }
+.pictureins{
+    width:50%;
+}
+.cards{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.link{
+    transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+         /* top: 50%; 
+        left: 50%; */
+        transform: translate(-50%, -50%); 
+        -ms-transform: translate(-50%, -50%);
+        text-align: center; 
+           
+}
+.cardins:hover .pictureins{
+    opacity: 1;
+}
+.cardins:hover .textins{
+    opacity: 0.1;
+}
+/* .cardins:hover .link1 {
+    opacity: 1;
+    
+}
+.cardins:hover .link2 {
+    opacity: 1;
+}
+.cardins:hover .link3 {
+    opacity: 1;
+}.cardins:hover .link4 {
+    opacity: 1;
+} */
+.cardins .link1 {
+    transition: .5s ease;
+    opacity: 1;
+   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .link1 .btn{
+    background-color: var(--color-dark);
+    color: aliceblue;
+    padding: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+    
+  }
+  .link2 .btn{
+    background-color: var(--color-dark);
+    color: aliceblue;
+    padding: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+  }
+  .link3 .btn{
+    background-color: var(--color-dark);
+    color: aliceblue;
+    padding: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+  }  .link4 .btn{
+    background-color: var(--color-dark);
+    color: aliceblue;
+    padding: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+    
+  }
+  .cardins .link2 {
+    transition: .5s ease;
+    opacity: 1;
+    
+   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .cardins .link3 {
+    transition: .5s ease;
+    opacity: 1;
+   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .cardins .link4 {
+    transition: .5s ease;
+    opacity: 1;
+   
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 20px;
+    background-color:rgba(10, 10, 13,0.6);
+  }
+  
+  .nav-menu{
+    text-align: right;
+    float:right;
+  }
+  /* nav bar buttons */
+  li {
+    display: inline;
+    float: left;
+    padding-left: 15px;
+    }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color:white;
+    }
+  
+  li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    }
+  
+  li a:hover {
+    background-color: #2c2c2c;
+    }
+  
+  .active {
+    background-color: #2c2c2c;
+    }
+  
+  /* nav bar icons */
+  .nav-icon{
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-icon i{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+  }
+  
+  .nav-icon i:hover{
+    transform: scale(1.1);
+    color: #2c2c2c;
+  
+  }
+  
+  #menu-icon{
+    font-size: 35px;
+    color: #fff;
+    z-index: 10001;
+    cursor: pointer;
+  }

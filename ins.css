@@ -1,0 +1,405 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap);
+/************************************/
+/**************** Variable **********/
+/************************************/
+:root {
+  /******* Common Variable******/
+  --lime-green: #1db489;
+  --bright-red: #dc414c;
+  --facebook: #178ff5;
+  --twitter: #1ca0f2;
+  --instagram: linear-gradient(90deg, #fdc468 0%, #df4996 100%);
+  --youtube: #c4032a;
+
+  /********** Light Theme ********/
+
+  --light-toggle: #aeb3cb;
+  --light-theme-bg: #ffffff;
+  --light-bg-card: #f0f2fa;
+  --light-blue-text: #63687e;
+  --dark-blue-text: #1e202a;
+  --hover: #cdced5;
+}
+/************************************/
+/************* Reset style **********/
+/************************************/
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+html[data-theme="dark"] {
+  --light-theme-b: #1e202a;
+  --light-theme-bg: #1e202a;
+  --light-bg-card: #252a41;
+  --dark-blue-text: #ffffff;
+  --hover: #40486d;
+  /* --light-blue-text: #ffffff; */
+}
+/*********** For animation *********/
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/************************************/
+/************* Base style **********/
+/************************************/
+body {
+  font-family: "Inter", sans-serif;
+  /* margin: 3rem; */
+  /* background: var(--light-theme-bg); */
+  background-color: black;
+}
+.card-section {
+  margin-bottom: 35px;
+}
+.card {
+  height: 22rem;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--light-bg-card);
+  border-radius: 6px;
+}
+.card-header {
+  grid-column: 2/4;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.card-header img {
+  width: 3rem;
+  margin-right: 15px;
+}
+.card-header p {
+  font-size: 1.5rem;
+  color: var(--light-blue-text);
+}
+.card-body {
+  grid-column: 2/4;
+  text-align: center;
+}
+
+ 
+/********** facebook Card Style *************************/
+
+.fb {
+  border-top: 5px solid var(--facebook);
+}
+
+/********** twitter Card Style *************************/
+.tw {
+  border-top: 5px solid var(--twitter);
+}
+
+/********** instagram Card Style *************************/
+.in {
+  border-top: 5px solid;
+  border-image-source: linear-gradient(90deg, #fdc468 0%, #df4996 100%);
+  border-image-slice: 1;
+}
+/********** youtube Card Style *************************/
+.yb {
+  border-top: 5px solid var(--youtube);
+}
+.yb .card-footer p {
+  color: var(--bright-red);
+  text-transform: capitalize;
+}
+/******************************************************/
+/******************  Overview Section  ****************/
+/******************************************************/
+.overview-section h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--light-blue-text);
+  letter-spacing: 2px;
+  grid-column: 1/5;
+}
+
+.overview-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 20rem;
+  background: var(--light-bg-card);
+  margin-top: 25px;
+  border-radius: 6px;
+}
+.page-views {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--light-blue-text);
+  margin: auto;
+}
+.fb-icon {
+  margin: auto;
+  width: 4rem;
+}
+.overview-card h2 {
+  font-size: 6rem;
+  margin-top: 25px;
+  border-radius: 6px;
+  color: var(--dark-blue-text);
+  margin: auto;
+  grid-column: 1/2;
+}
+.up-down-icon {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto;
+  width: 1.5rem;
+}
+
+.percentage {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto;
+  padding-left: 45px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--lime-green);
+}
+.fb-down {
+  color: var(--bright-red);
+}
+.in-up {
+  padding-left: 80px;
+  color: var(--lime-green);
+}
+.tw-up {
+  margin-left: 55px;
+}
+.yb-down {
+  padding-left: 60px;
+  color: var(--bright-red);
+}
+/* Large tablets & laptop styles*/
+@media (min-width: 501px) and (max-width: 768px) {
+  .card {
+    margin-top: 0;
+  }
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .overview-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .overview-section h2 {
+    grid-column: 1/3;
+  }
+  /* .overview-card {
+    margin-top: 0;
+  } */
+  .overview-card h2 {
+    grid-column: 1/2;
+  }
+  .tw-up {
+    margin-left: 52px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .overview-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+  .overview-card:nth-child(5) {
+    grid-column: 1/2;
+  }
+  
+  .overview-card h2 {
+    grid-column: 1/2;
+    font-size: 4rem;
+    color: antiquewhite;
+  }
+}
+
+/* Desktop styles*/
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 5rem;
+  }
+  header {
+    margin-bottom: 0;
+  }
+  main {
+    border-top: none;
+  }
+  .main-title {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  .main-title p {
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  .card:hover {
+    cursor: pointer;
+    background: var(--hover);
+  }
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+  }
+  .card-header {
+    margin-top: 20px;
+  }
+  .card-header img {
+    width: 2rem;
+  }
+  .overview-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+  /* .overview-card:hover {
+    cursor: pointer;
+    background: var(--hover);
+  }
+  .overview-card {
+    margin-top: 0; */
+  }
+
+  .page-views {
+    font-size: 1.5rem;
+  }
+  .fb-icon {
+    width: 2.5rem;
+  }
+  .overview-card h2 {
+    font-size: 4rem;
+    grid-column: 1/2;
+  }
+  .percentage {
+    font-size: 1.5rem;
+  }
+  .tw-up {
+    margin-left: 64px;
+  }
+
+/* ----------------trial----------------------- */
+/* .overview-card{
+  background: #1e202a;
+  transition: 0.5s;
+
+}
+
+
+        
+        .overview-card:before{
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: #fff;
+          z-index: -1;}
+          .overview-card:after{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -2;
+           filter: blur(40px);
+        }
+
+        .overview-card:before,
+        .overview-card:after
+        {
+            background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+        }
+        .overview-card:nth-child(2):before,
+        .overview-card:nth-child(2):after
+        {
+            background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+        }
+        .overview-card:nth-child(3):before,
+        .overview-card:nth-child(3):after
+        {
+            background: linear-gradient(235deg,#772aff,#010615,#2196F3);
+        }
+        .overview-card:nth-child(4):before,
+        .overview-card:nth-child(4):after
+        {
+            background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+        }
+        .overview-card:nth-child(5):before,
+        .overview-card:nth-child(5):after
+        {
+            background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+        }
+        .overview-card:nth-child(6):before,
+        .overview-card:nth-child(6):after
+        {
+            background: linear-gradient(235deg,#772aff,#010615,#2196F3);
+        } */
+body{
+  margin: 0;
+  padding:0;
+  background-color: black;
+
+}
+.overview-card{
+  position: relative;
+  background-color: #252a41;
+  margin: 10%;
+  
+}
+.overview-card::before, .overview-card::after
+{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background:  linear-gradient(45deg,#fbff00,#ff6600, #00ff66 , #00ffff,#ff00ff,#ff0099,#6a0dd0,#ff3300,#3099ff);
+  
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  
+  animation: animate 20s linear infinite;
+            
+
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+
+  }
+  50%{
+    background-position: 400% 0;
+
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+.overview-card::after{
+  filter: blur(40px);
+}

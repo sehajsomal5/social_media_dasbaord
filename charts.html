@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        .btn{
+            font-size: xx-large;
+            background-color: paleturquoise;
+            border-radius: 24px 6px 24px 6px;
+        }
+    </style>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+{
+	title:{
+		text: "Analysis",
+	},
+	data: [
+	{
+		type: "column",
+        
+		dataPoints: [
+ 			{ label: "Post views",  y: 10000  },
+				{ label: "Likes", y: 5000  },
+				{ label: "Comments", y: 2462  },
+				{ label: "Profile Views",  y: 5397  },
+				{ label: "Post Shares",  y: 133  },
+                { label: "Profile Shares",  y: 133  }
+		]
+	}
+	]
+});
+chart.render();
+//------------------------- line----------------//
+function line() {
+    
+    chart.options.data[0].type = "line";     
+    chart.render();
+}
+var button = document.getElementById( "line" );
+button.addEventListener( "click",  line);
+// ------------------------pie---------------//
+function pie() {
+    
+    chart.options.data[0].type = "pie";     
+    chart.render();
+}
+var button = document.getElementById( "pie" );
+button.addEventListener( "click",  pie);
+// -----------------------------scttered---------------------------------------------
+function scattered() {
+    
+    chart.options.data[0].type = "Scatter";     
+    chart.render();
+}
+var button = document.getElementById( "scattered" );
+button.addEventListener( "click",  scattered);
+}
+</script>
+</head>
+<body>
+    <div class="chartType">
+        <button type="submit" name="line" id="line" class="btn" onclick="line()" >Line</button>
+        <button type="submit" name="pie" id="pie" class="btn"  >Pie</button>
+        <button type="submit" name="scattered" id="scattered" class="btn"  >Scattered</button>
+    </div>
+<div id="chartContainer" style="height: 300px; width: 80%;"></div>
+</body>
+</html>
